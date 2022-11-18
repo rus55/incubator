@@ -2,4 +2,4 @@
 
 function invert(array) {
 	return array.map(item => -(item));
-}
+}count with him.Given the number
