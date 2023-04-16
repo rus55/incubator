@@ -1,27 +1,14 @@
-/* Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
-For example,
-[true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true]
-The correct answer would be 17.
-Hint: Don't forget to check for bad values like null/undefined */
+/* If you can't sleep, just count sheep!!
 
-function countSheeps(arrayOfSheep) {
-	let count = 0;
-	for (let i = 0; i < arrayOfSheep.length; i++) {
-		if (arrayOfSheep[i]) {
-			count += 1;
-		}
+Task:
+Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers. */
+
+var countSheep = function (num){
+	let str = "";
+	for (let i = 1; i <= num; i++) {
+		str+= `${i} sheep...`;
 	}
-	return count
+	return str
 }
 
-console.log(countSheeps([true, true, true, false,
-	true, true, true, true,
-	true, false, true, false,
-	true, false, false, true,
-	true, true, true, true,
-	false, false, true, true]));
+console.log(countSheep(3));
